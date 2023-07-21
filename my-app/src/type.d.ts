@@ -7,7 +7,7 @@ interface ITodo {
     updatedAt?: string;
 }
 
-interface TodoPreps {
+interface TodoProps {
     todo: ITodo 
 }
 
