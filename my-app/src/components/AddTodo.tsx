@@ -12,7 +12,10 @@ const Todo: React.FC<Props> = ({
 }) => {
     const checkTodo: string = todo.status ? `line-through` : " "
     return (
-        <div>
+        <div className='Card'>
+            <div className='Card-text'>
+                <h1 className= {checkTodo}> {todo.name}</h1>
+            </div>
         </div>
     )
 }
