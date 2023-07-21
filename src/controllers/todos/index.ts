@@ -73,3 +73,6 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
     throw err;
   }
 };
+
+
+export { getTodos, addTodo, updateTodo, deleteTodo };
