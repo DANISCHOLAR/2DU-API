@@ -13,9 +13,15 @@ const Todo: React.FC<Props> = ({
     const checkTodo: string = todo.status ? `line-through` : " "
     return (
         <div className='Card'>
-            <div className='Card-text'>
-                <h1 className= {checkTodo}> {todo.name}</h1>
+            <div className='Card--text'>
+                <h1 className={checkTodo}> {todo.name}</h1>
+                <span className={checkTodo}> {todo.description}</span>
             </div>
+
+                <div className=" Card--button"> 
+                <button onClick={() => updateTodo(todo)} className= {todo.status ? `hide-button` : "Card--button__done"}
+                </div>
+
         </div>
     )
 }
