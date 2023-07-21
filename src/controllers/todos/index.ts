@@ -31,3 +31,20 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
         throw err
     }
 };
+
+const updateTodo = async (req: Request, res: Response): Promise<void>  => {
+  try{
+    const{
+      params: {id},
+      body,
+    } = req
+const updateTodo: ITodo | null = await Todo.findByIdAndUpdate(
+  {
+    _id: id
+  },
+  body
+)
+const 
+
+  }
+}
