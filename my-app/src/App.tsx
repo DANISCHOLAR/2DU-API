@@ -24,12 +24,24 @@ const App: React.FC = () => {
         if (status !== 201) {
           throw new Error("Error! Todo not saved ")
         }
-setTodos(data.todos)
+        setTodos(data.todos)
       })
-        .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
 
+  const handleUpdateTodo = (todo: ITodo): void => {
+    updateTodo(todo)
+      .then(({ status, data }) => {
+        if (status !== 200) {
+          throw new Error("Error! Todo not updated ")
+        }
+        setTodos(data.todos)
+      })
+      .catch(err => console.log(err))
+    }
 
+
+    const handleDelete
 
 
 }
