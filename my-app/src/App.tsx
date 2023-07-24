@@ -41,7 +41,16 @@ const App: React.FC = () => {
     }
 
 
-    const handleDelete
+    const handleDeleteTodo = (_id: string): void => {
+      deleteTodo(_id)
+      .then(({status, data}) => {
+        if (status !== 200) {
+          throw new Error("Error! Todo not deleted")
+        }
+        setTodos(data.todos)
+      })
+      .catch(err => console.log(err))
+    }
 
 
 }
