@@ -9,6 +9,7 @@ interface ITodo {
 
 interface TodoProps {
     todo: ITodo 
+    // toggleFunction: (todo: ITodo) => void
 }
 
 type ApiDataType = {
